@@ -95,7 +95,7 @@ const VendorLoginForm = () => {
       className="bg-gradient-to-tr from-green-100 via-blue-50 to-emerald-100 min-h-screen flex flex-col"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80')",
+          "url('https://img.freepik.com/premium-vector/outdoor-organic-food-grocery-market-stall-with-fruits-vegetables-horizontal-cityscape-background_48369-47984.jpg?w=996')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

@@ -76,7 +76,7 @@ const ConsumerLogin = () => {
     <div
       className="bg-gradient-to-tr from-green-100 via-blue-50 to-emerald-100 min-h-screen flex flex-col"
       style={{
-        backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8IMeAXVueTflCQy_MNhIuZOyNXvB6rYnu_g&s')`,
+        backgroundImage: `url('https://img.freepik.com/free-vector/man-seller-sells-fresh-organic-fruit-vegetable-street-shop-seasonal-outdoor-farmer-local-market_575670-344.jpg?t=st=1745676333~exp=1745679933~hmac=200fc5b83336850636e6815e29d14f087b6dc32fb3a8c5421bd63cf29ad528ca&w=826')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -245,6 +245,9 @@ const ConsumerLogin = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      <footer className="mt-10 bg-gray-900 text-gray-300 p-4 text-center text-xs">
+        <p>© 2025 GoCart. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 };
