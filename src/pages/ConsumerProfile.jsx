@@ -46,7 +46,7 @@ const ConsumerProfile = () => {
     const fetchData = async () => {
       try {
         const consumerResponse = await axios.get(
-          `https://gocart-gqbi.onrender.com/consumers/${consumerId}`
+          `https://gocart-backend-bfil.onrender.com/consumers/${consumerId}`
         );
         setConsumer(consumerResponse.data.data);
         setEditData({
@@ -56,7 +56,7 @@ const ConsumerProfile = () => {
         });
         if (activeTab === "orders") {
           const ordersResponse = await axios.get(
-            `https://gocart-gqbi.onrender.com/orders/consumer/${consumerId}`
+            `https://gocart-backend-bfil.onrender.com/orders/consumer/${consumerId}`
           );
           setOrders(ordersResponse.data.data);
         }
@@ -73,7 +73,7 @@ const ConsumerProfile = () => {
     setSaving(true);
     const consumerId = JSON.parse(localStorage.getItem("consumer_id"));
     axios
-      .put(`https://gocart-gqbi.onrender.com/consumers/${consumerId}`, {
+      .put(`https://gocart-backend-bfil.onrender.com/consumers/${consumerId}`, {
         ...editData,
         Address: editData.address,
       })

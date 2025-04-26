@@ -15,7 +15,7 @@ const ConsumerOrderPage = () => {
   useEffect(() => {
     const vendorId = JSON.parse(localStorage.getItem("vendor_id"));
     axios
-      .get(`https://gocart-gqbi.onrender.com/products/${vendorId}`)
+      .get(`https://gocart-backend-bfil.onrender.com/products/${vendorId}`)
       .then((res) => setProducts(res.data.data || []))
       .catch((err) => console.log(err));
 

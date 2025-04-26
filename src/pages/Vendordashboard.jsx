@@ -35,15 +35,15 @@ const VendorDashboard = () => {
   // Fetch Vendor Info, Products, Orders
   useEffect(() => {
     if (vendorId) {
-      axios.get(`https://gocart-gqbi.onrender.com/vendors/${vendorId}`)
+      axios.get(`https://gocart-backend-bfil.onrender.com/vendors/${vendorId}`)
         .then((res) => setVendorData(res.data.data))
         .catch((err) => console.error("Vendor fetch failed:", err));
 
-      axios.get(`https://gocart-gqbi.onrender.com/products/${vendorId}`)
+      axios.get(`https://gocart-backend-bfil.onrender.com/products/${vendorId}`)
         .then((res) => setProductList(res.data.data))
         .catch((err) => console.error("Product fetch failed:", err));
 
-      axios.get("https://gocart-gqbi.onrender.com/orders")
+      axios.get("https://gocart-backend-bfil.onrender.com/orders")
         .then((res) => {
           const allOrders = res.data.data;
           const vendorOrders = allOrders.filter(order => order.products.some(p => p.productId.vendorId === vendorId));
@@ -72,7 +72,7 @@ const VendorDashboard = () => {
   };
 
   const handleSubmitProduct = () => {
-    axios.post("https://gocart-gqbi.onrender.com/products", productDetails)
+    axios.post("https://gocart-backend-bfil.onrender.com/products", productDetails)
       .then((res) => {
         alert("Product added!");
         setProductList([...productList, res.data]);
@@ -94,7 +94,7 @@ const VendorDashboard = () => {
   };
 
   const handleDeleteProduct = (productId) => {
-    axios.delete(`https://gocart-gqbi.onrender.com/products/${productId}`)
+    axios.delete(`https://gocart-backend-bfil.onrender.com/products/${productId}`)
       .then(() => {
         setProductList(productList.filter((p) => p._id !== productId));
         alert("Product deleted!");
@@ -103,7 +103,7 @@ const VendorDashboard = () => {
   };
 
   const updateOrderStatus = (orderId, newStatus) => {
-    axios.put(`https://gocart-gqbi.onrender.com/orders/${orderId}`, { status: newStatus })
+    axios.put(`https://gocart-backend-bfil.onrender.com/orders/${orderId}`, { status: newStatus })
       .then(() => {
         alert(`Order marked as ${newStatus}`);
         setOrderList(orderList.filter(o => o._id !== orderId));

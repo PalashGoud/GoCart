@@ -34,7 +34,7 @@ const VendorLoginForm = () => {
     setLoading(true);
 
     axios
-      .post("https://gocart-gqbi.onrender.com/vendors/login", formData)
+      .post("https://gocart-backend-bfil.onrender.com/vendors/login", formData)
       .then((res) => {
         const vendor = res.data.data;
         localStorage.setItem("vendor_id", JSON.stringify(vendor._id));
@@ -54,7 +54,7 @@ const VendorLoginForm = () => {
     setResetLoading(true);
     setMsg("");
     axios
-      .post("https://gocart-gqbi.onrender.com/vendors/forgot", { mobile_number: forgotMobile })
+      .post("https://gocart-backend-bfil.onrender.com/vendors/forgot", { mobile_number: forgotMobile })
       .then((res) => {
         setOtpSent(true);
         setMsg("OTP sent! Please check your SMS/email.");
@@ -71,7 +71,7 @@ const VendorLoginForm = () => {
     setResetLoading(true);
     setMsg("");
     axios
-      .post("https://gocart-gqbi.onrender.com/vendors/reset", {
+      .post("https://gocart-backend-bfil.onrender.com/vendors/reset", {
         mobile_number: forgotMobile,
         otp,
         newPassword,

@@ -52,7 +52,7 @@ const VendorJoinPage = () => {
 
     try {
       const res = await axios.post(
-        "https://gocart-gqbi.onrender.com/vendors",
+        "https://gocart-backend-bfil.onrender.com/vendors",
         form,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

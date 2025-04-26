@@ -12,7 +12,7 @@ const VendorsListPage = () => {
   useEffect(() => {
     const fetchVendors = async () => {
       try {
-        const res = await axios.get("https://gocart-gqbi.onrender.com/vendors");
+        const res = await axios.get("https://gocart-backend-bfil.onrender.com/vendors");
         setVendors(res.data.data || []);
       } catch (error) {
         console.error("Error fetching vendors:", error);

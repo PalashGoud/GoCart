@@ -82,7 +82,7 @@ const CartPage = () => {
 
     try {
       setLoading(true);
-      await axios.post("https://gocart-gqbi.onrender.com/orders", orderData);
+      await axios.post("https://gocart-backend-bfil.onrender.com/orders", orderData);
       localStorage.removeItem("cart");
       setCart([]);
       setOrderSuccess(true);

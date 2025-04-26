@@ -26,7 +26,7 @@ const ConsumerLogin = () => {
     e.preventDefault();
     setLoading(true);
     axios
-      .post("https://gocart-gqbi.onrender.com/consumers/login", formData)
+      .post("https://gocart-backend-bfil.onrender.com/consumers/login", formData)
       .then((res) => {
         const consumer = res.data.data;
         localStorage.setItem("consumer_id", JSON.stringify(consumer._id));
@@ -45,7 +45,7 @@ const ConsumerLogin = () => {
     setModalMsg("");
     setLoading(true);
     axios
-      .post("https://gocart-gqbi.onrender.com/send-otp-mail", {
+      .post("https://gocart-backend-bfil.onrender.com/send-otp-mail", {
         to: email,
         subject: "OTP for Password Reset",
       })
