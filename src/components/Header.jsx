@@ -128,18 +128,7 @@ const Header = () => {
                     Login as Consumer
                   </motion.button>
                 </div>
-                <div className="mt-6 text-sm text-gray-400 text-center">
-                  New to GoCart?{" "}
-                  <span
-                    className="text-green-700 cursor-pointer font-semibold hover:underline"
-                    onClick={() => {
-                      setShowLoginPanel(false);
-                      navigate("/consumer-auth");
-                    }}
-                  >
-                    Register here
-                  </span>
-                </div>
+               
               </div>
             </motion.div>
             {/* Background overlay */}
